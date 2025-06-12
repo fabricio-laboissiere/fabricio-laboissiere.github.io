@@ -20,6 +20,8 @@ jobs:
         run: npm install # Adjust this if you're using a different package manager
       - name: Build your site
         run: npm run build # Ensure your `package.json` has a `build` script
+      - name: List build output
+        run: ls -l ./dist
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
